@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beaujolais Energies à Theizé (69620)</title>
+<meta name="description" content="Beaujolais Energies à Theizé (69620). Installation de panneaux solaires, rénovation énergétique, pompes à chaleur, isolation thermique dans le Beaujolais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A1A1A;
+    --secondary: #C9A227;
+    --background: #F5F0E6;
+    --text: #2B2B2B;
+    --cta: #C9A227;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Karla', sans-serif;
+    --radius: 0;
+    --transition: 0.4s ease;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1.25;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── ANIMATIONS ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── BOUTONS CTA ── */
+  .cta {
+    display: inline-block;
+    background: var(--cta);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition), transform 0.2s;
+    text-align: center;
+  }
+  .cta:hover { background: #a8841e; transform: translateY(-2px); }
+  .cta-outline {
+    display: inline-block;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.8rem;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition);
+  }
+  .cta-outline:hover { background: var(--secondary); color: #fff; }
+
+  /* ── SECTION COMMUNE ── */
+  section { padding: 5rem 1.25rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 1.2rem;
+  }
+  .section-intro {
+    max-width: 640px;
+    color: #555;
+    margin-bottom: 2.8rem;
+    font-size: 1.05rem;
+  }
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: var(--secondary);
+    margin: 1rem 0 2rem;
+  }
+
+  /* ── CORNER FRAME ── */
+  .corner-frame {
+    position: relative;
+    display: inline-block;
+  }
+  .corner-frame::before,
+  .corner-frame::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-color: var(--secondary);
+    border-style: solid;
+    z-index: 2;
+  }
+  .corner-frame::before {
+    top: -8px;
+    left: -8px;
+    border-width: 2px 0 0 2px;
+  }
+  .corner-frame::after {
+    bottom: -8px;
+    right: -8px;
+    border-width: 0 2px 2px 0;
+  }
+
+  /* ══════════════════════════════════════
+     NAV
+  ══════════════════════════════════════ */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(26,26,26,0.96);
+    backdrop-filter: blur(6px);
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: rgba(26,26,26,0.98);
+    padding: 1.5rem 1.25rem;
+    gap: 0.5rem;
+  }
+  nav ul.open { display: flex; }
+  nav ul li a {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #e0d8c8;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color 0.2s;
+  }
+  nav ul li a:hover { color: var(--secondary); }
+  .nav-cta-wrap { display: none; }
+  .burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+  }
+  .burger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--secondary);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.active span:nth-child(2) { opacity: 0; }
+  .burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (min-width: 768px) {
+    nav ul {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background: none;
+      padding: 0;
+      gap: 0.2rem;
+      align-items: center;
+    }
+    nav ul li a { padding: 0.3rem 0.75rem; font-size: 0.78rem; }
+    .burger { display: none; }
+    .nav-cta-wrap { display: block; }
+    .nav-cta-wrap a {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--secondary);
+      color: #fff;
+      padding: 0.55rem 1.2rem;
+      transition: background 0.3s;
+    }
+    .nav-cta-wrap a:hover { background: #a8841e; }
+  }
+
+  /* ══════════════════════════════════════
+     HERO
+  ══════════════════════════════════════ */
+  #hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('assets/hero.jpg') center center / cover no-repeat;
+    z-index: 0;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(10,8,5,0.88) 0%, rgba(10,8,5,0.55) 60%, rgba(10,8,5,0.2) 100%);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 7rem 1.25rem 4rem;
+    width: 100%;
+  }
+  .hero-inner {
+    max-width: 580px;
+  }
+  .hero-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    color: #fff;
+    margin-bottom: 0.6rem;
+    line-height: 1.15;
+  }
+  .hero-sub {
+    font-family: var(--font-heading);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--secondary);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+  }
+  .hero-text {
+    color: #d4cfc5;
+    font-size: 1.05rem;
+    margin-bottom: 2.2rem;
+    max-width: 480px;
+    line-height: 1.75;
+  }
+  .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+  /* ══════════════════════════════════════
+     ABOUT
+  ══════════════════════════════════════ */
+  #apropos { background: #fff; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .about-img-wrap {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .about-img-wrap img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+  }
+  .about-text p {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+  }
+  .about-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.8rem;
+  }
+  .badge {
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+  }
+  @media (min-width: 768px) {
+    .about-grid { grid-template-columns: 1fr 1fr; }
+    .about-img-wrap { max-width: 100%; }
+  }
+
+  /* ══════════════════════════════════════
+     FEATURED MENU (PRESTATIONS)
+  ══════════════════════════════════════ */
+  #prestations { background: var(--background); }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .card {
+    background: #fff;
+    padding: 2rem 1.75rem;
+    border-left: 3px solid var(--secondary);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+  }
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+    color: var(--primary);
+  }
+  .card p { color: #666; font-size: 0.95rem; }
+  @media (min-width: 768px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .cards-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ══════════════════════════════════════
+     CUSTOMER REVIEWS
+  ══════════════════════════════════════ */
+  #avis { background: var(--primary); }
+  #avis .section-title { color: #fff; }
+  #avis .section-label { color: var(--secondary); }
+  #avis .section-intro { color: #aaa; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .review-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,162,39,0.25);
+    padding: 2rem 1.75rem;
+    position: relative;
+  }
+  .review-icon {
+    font-size: 2rem;
+    color: var(--secondary);
+    line-height: 1;
+    margin-bottom: 0.8rem;
+    display: block;
+    font-family: Georgia, serif;
+  }
+  .stars { color: var(--secondary); font-size: 1rem; margin-bottom: 0.8rem; letter-spacing: 0.1em; }
+  .review-text { color: #d4cfc5; font-size: 0.97rem; font-style: italic; margin-bottom: 1.2rem; line-height: 1.7; }
+  .review-author { font-family: var(--font-heading); font-size: 0.8rem; color: var(--secondary); letter-spacing: 0.1em; text-transform: uppercase; }
+  .review-date { font-size: 0.78rem; color: #888; margin-top: 0.2rem; }
+  .no-reviews-msg { color: #aaa; font-size: 1rem; text-align: center; padding: 2rem 0; }
+  @media (min-width: 768px) {
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ══════════════════════════════════════
+     GALLERY CAROUSEL
+  ══════════════════════════════════════ */
+  #galerie { background: #fff; overflow: hidden; }
+  .carousel-wrap { position: relative; }
+  .carousel-track-outer { overflow: hidden; }
+  .carousel-track {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease;
+  }
+  .carousel-slide {
+    flex: 0 0 calc(100% - 1rem);
+    position: relative;
+  }
+  .carousel-slide img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--secondary);
+    border: none;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .carousel-btn:hover { background: #a8841e; }
+  .carousel-btn.prev { left: 0.5rem; }
+  .carousel-btn.next { right: 0.5rem; }
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+  }
+  .dot {
+    width: 8px; height: 8px;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .dot.active { background: var(--secondary); }
+  @media (min-width: 768px) {
+    .carousel-slide { flex: 0 0 calc(50% - 0.5rem); }
+    .carousel-slide img { height: 340px; }
+  }
+  @media (min-width: 1024px) {
+    .carousel-slide { flex: 0 0 calc(33.333% - 0.67rem); }
+    .carousel-slide img { height: 380px; }
+  }
+
+  /* ══════════════════════════════════════
+     HOURS & LOCATION
+  ══════════════════════════════════════ */
+  #horaires { background: var(--background); }
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hours-table-wrap h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    color: var(--primary);
+  }
+  .hours-contact-line {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #fff;
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid var(--secondary);
+    font-size: 1rem;
+    color: var(--text);
+  }
+  .hours-contact-line a { color: var(--secondary); font-weight: 600; }
+  .address-block {
+    background: #fff;
+    padding: 1.5rem;
+    border-left: 3px solid var(--secondary);
+    margin-top: 1.5rem;
+  }
+  .address-block p { color: #555; font-size: 0.97rem; margin-bottom: 0.4rem; }
+  .address-block strong { color: var(--primary); }
+  .map-wrap {
+    width: 100%;
+    height: 300px;
+    background: #ddd;
+    overflow: hidden;
+  }
+  .map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  @media (min-width: 768px) {
+    .hours-grid { grid-template-columns: 1fr 1fr; }
+    .map-wrap { height: 100%; min-height: 320px; }
+  }
+
+  /* ══════════════════════════════════════
+     CONTACT FORM
+  ══════════════════════════════════════ */
+  #contact { background: var(--primary); }
+  #contact .section-title { color: #fff; }
+  #contact .section-label { color: var(--secondary); }
+  #contact .section-intro { color: #aaa; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-info h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+  }
+  .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  .contact-info-item .ci-icon {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .contact-info-item p { color: #ccc; font-size: 0.95rem; }
+  .contact-info-item a { color: var(--secondary); }
+  form { display: flex; flex-direction: column; gap: 1.1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #aaa;
+  }
+  .form-group input,
+  .form-group textarea {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 0.85rem 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus { border-color: var(--secondary); }
+  .form-group textarea { resize: vertical; min-height: 130px; }
+  @media (min-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr 1.6fr; }
+  }
+
+  /* ══════════════════════════════════════
+     TRUST SIGNALS
+  ══════════════════════════════════════ */
+  #confiance { background: var(--background); }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    background: #fff;
+    padding: 1.25rem 1rem;
+  }
+  .trust-icon {
+    font-size: 1.4rem;
+    color: var(--secondary);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .trust-item p {
+    font-size: 0.9rem;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  @media (min-width: 768px) {
+    .trust-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .trust-grid { grid-template-columns: repeat(6, 1fr); }
+  }
+
+  /* ══════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════ */
+  footer {
+    background: #111;
+    color: #aaa;
+    padding: 3rem 1.25rem 2rem;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-brand .nav-logo { font-size: 1.1rem; margin-bottom: 0.8rem; display: block; }
+  .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 300px; }
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--secondary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.5rem; }
+  .footer-col ul li a { font-size: 0.9rem; color: #aaa; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--secondary); }
+  .footer-col p { font-size: 0.9rem; line-height: 1.7; }
+  .footer-col a { color: var(--secondary); }
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #666;
+  }
+  @media (min-width: 768px) {
+    .footer-inner { grid-template-columns: 2fr 1fr 1fr; }
+  }
+
+/* ── GARDE-FOU NAV (post-traitement deterministe, pas le LLM) ────────────────
+   Le modele produit typiquement `nav ul.open { flex-direction:column }` SANS
+   media query. Sa specificite (0,2,1) bat la regle desktop `nav ul` (0,0,2)
+   quand celle-ci n'a pas !important sur flex-direction : au retour en desktop
+   apres ouverture du burger, le menu reste empile en colonne (menu casse).
+   Cette regle force l'etat desktop quel que soit l'etat de .open. */
+@media (min-width: 768px) {
+  nav ul, nav ul.open, nav.open ul, nav ul[data-open="true"] {
+    flex-direction: row !important;
+    position: static !important;
+    display: flex !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: auto !important;
+  }
+  .burger, button.burger, .nav-toggle, #burger, .burger-menu { display: none !important; }
+}
+</style>
+<meta name="robots" content="noindex">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav aria-label="Navigation principale">
+  <a href="#hero" class="nav-logo">Beaujolais Energies</a>
+  <ul id="nav-menu">
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#prestations">Prestations</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#galerie">Galerie</a></li>
+    <li><a href="#horaires">Horaires</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta-wrap">
+    <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Devis gratuit</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero" aria-label="Accueil Beaujolais Energies">
+  <div class="hero-bg" role="img" aria-label="Rénovation énergétique dans le Beaujolais"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-inner fade-in">
+      <span class="hero-label">Énergies &amp; Rénovation — Beaujolais, Rhône</span>
+      <h1 class="hero-title">Beaujolais Energies</h1>
+      <p class="hero-sub">Theizé (69620)</p>
+      <p class="hero-text">Spécialiste de la rénovation énergétique et de l'installation de panneaux solaires dans le Beaujolais. Artisans qualifiés RGE, nous vous accompagnons de l'audit à la mise en service, avec un suivi complet des aides et subventions disponibles.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Demander un devis gratuit</a>
+        <a href="tel:+33638649818" class="cta-outline" aria-label="Nous appeler">Nous appeler</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="apropos" aria-label="À propos de Beaujolais Energies">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap corner-frame fade-in">
+        <img src="assets/gallery-1.jpg" alt="Artisan Beaujolais Energies au travail" loading="lazy">
+      </div>
+      <div class="about-text fade-in">
+        <span class="section-label">Qui sommes-nous</span>
+        <h2 class="section-title">À propos de Beaujolais Energies</h2>
+        <div class="divider"></div>
+        <p>Beaujolais Energies est une entreprise locale implantée à Theizé, dans le département du Rhône (69620), au cœur du Beaujolais. Nous intervenons auprès des particuliers et des professionnels pour tous leurs projets de rénovation énergétique et d'installation de solutions renouvelables.</p>
+        <p>Notre équipe d'artisans qualifiés RGE prend en charge l'intégralité de votre projet : de l'audit énergétique initial jusqu'à la mise en service de vos équipements, en passant par l'accompagnement administratif pour l'obtention des aides et subventions auxquelles vous avez droit.</p>
+        <p>Nous intervenons à Theizé, Villefranche-sur-Saône et dans tout le secteur du Beaujolais et du Rhône. Pour toute information complémentaire, nous vous invitons à nous contacter directement.</p>
+        <div class="about-badges">
+          <span class="badge">RGE certifié</span>
+          <span class="badge">Beaujolais</span>
+          <span class="badge">Devis gratuit</span>
+        </div>
+        <br>
+        <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURED MENU (PRESTATIONS) ══ -->
+<section id="prestations" aria-label="Nos prestations">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Ce que nous faisons</span>
+      <h2 class="section-title">Nos prestations</h2>
+      <div class="divider"></div>
+      <p class="section-intro">Beaujolais Energies vous propose une gamme complète de services pour améliorer le confort et la performance énergétique de votre habitation dans le Beaujolais et le Rhône.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card fade-in">
+        <span class="card-icon">☀️</span>
+        <h3>Installation de panneaux solaires</h3>
+        <p>Étude, fourniture et pose de panneaux photovoltaïques adaptés à votre toiture et à votre consommation. Démarches administratives incluses.</p>
+      </div>
+      <div class="card fade-in">
+        <span class="card-icon">🔥</span>
+        <h3>Pompes à chaleur</h3>
+        <p>Installation et mise en service de pompes à chaleur air/eau ou air/air pour un chauffage performant et économique tout au long de l'année.</p>
+      </div>
+      <div class="card fade-in">
+        <span class="card-icon">🏠</span>
+        <h3>Isolation thermique</h3>
+        <p>Isolation des combles, des murs et des planchers pour réduire vos déperditions de chaleur et améliorer durablement votre confort intérieur.</p>
+      </div>
+      <div class="card fade-in">
+        <span class="card-icon">📋</span>
+        <h3>Audit énergétique</h3>
+        <p>Diagnostic complet de votre logement pour identifier les points faibles et définir les travaux prioritaires à réaliser selon votre budget.</p>
+      </div>
+      <div class="card fade-in">
+        <span class="card-icon">🔧</span>
+        <h3>Entretien et dépannage</h3>
+        <p>Maintenance préventive et interventions de dépannage sur vos équipements de chauffage, de production d'eau chaude et d'énergie solaire.</p>
+      </div>
+      <div class="card fade-in">
+        <span class="card-icon">💶</span>
+        <h3>Accompagnement aides et subventions</h3>
+        <p>Nous vous guidons dans l'obtention de MaPrimeRénov', des CEE et de toutes les aides locales disponibles pour financer vos travaux de rénovation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CUSTOMER REVIEWS ══ -->
+<section id="avis" aria-label="Avis clients">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Ce que disent nos clients</span>
+      <h2 class="section-title">Avis clients</h2>
+      <div class="divider" style="background:#C9A227;"></div>
+    </div>
+    <div class="no-reviews-msg fade-in">
+      <p>Aucun avis client n'est disponible pour le moment. N'hésitez pas à nous contacter pour en savoir plus sur nos réalisations dans le Beaujolais.</p>
+      <br>
+      <a href="#contact" class="cta" aria-label="Nous contacter">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY CAROUSEL ══ -->
+<section id="galerie" aria-label="Galerie de réalisations">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Nos réalisations</span>
+      <h2 class="section-title">Galerie</h2>
+      <div class="divider"></div>
+      <p class="section-intro">Découvrez quelques-unes de nos interventions réalisées chez des particuliers dans le Beaujolais et le Rhône.</p>
+    </div>
+    <div class="carousel-wrap fade-in">
+      <div class="carousel-track-outer">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide corner-frame">
+            <img src="assets/hero.jpg" alt="Installation énergétique Beaujolais Energies" loading="lazy">
+          </div>
+          <div class="carousel-slide corner-frame">
+            <img src="assets/gallery-1.jpg" alt="Rénovation énergétique dans le Beaujolais" loading="lazy">
+          </div>
+          <div class="carousel-slide corner-frame">
+            <img src="assets/gallery-2.jpg" alt="Pose de panneaux solaires à Theizé" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev" id="carouselPrev" aria-label="Image précédente">&#8592;</button>
+      <button class="carousel-btn next" id="carouselNext" aria-label="Image suivante">&#8594;</button>
+      <div class="carousel-dots" id="carouselDots">
+        <button class="dot active" aria-label="Diapositive 1"></button>
+        <button class="dot" aria-label="Diapositive 2"></button>
+        <button class="dot" aria-label="Diapositive 3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOURS & LOCATION ══ -->
+<section id="horaires" aria-label="Horaires et adresse">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Nous trouver</span>
+      <h2 class="section-title">Horaires et adresse</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="hours-grid">
+      <div class="hours-table-wrap fade-in">
+        <h3>Disponibilités</h3>
+        <div class="hours-contact-line">
+          <span>📞</span>
+          <p>Horaires sur demande — Contactez-nous au <a href="tel:+33638649818">06 38 64 98 18</a> pour connaître nos disponibilités.</p>
+        </div>
+        <div class="address-block">
+          <p><strong>Beaujolais Energies</strong></p>
+          <p>69620 Theizé</p>
+          <p>Rhône — Beaujolais</p>
+          <br>
+          <p>📞 <a href="tel:+33638649818" style="color:var(--secondary);">06 38 64 98 18</a></p>
+        </div>
+        <br>
+        <a href="tel:+33638649818" class="cta" aria-label="Nous appeler">Nous appeler</a>
+      </div>
+      <div class="map-wrap fade-in">
+        <iframe
+          src="https://www.google.com/maps?q=45.939610,4.616297&z=15&output=embed"
+          title="Localisation de Beaujolais Energies à Theizé"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT FORM ══ -->
+<section id="contact" aria-label="Formulaire de contact">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Écrivez-nous</span>
+      <h2 class="section-title">Contactez-nous</h2>
+      <div class="divider" style="background:#C9A227;"></div>
+      <p class="section-intro">Pour toute demande d'information ou de devis gratuit, merci de remplir le formulaire ci-dessous. Nous vous répondrons dans les meilleurs délais.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <h3>Beaujolais Energies</h3>
+        <div class="contact-info-item">
+          <span class="ci-icon">📍</span>
+          <p>69620 Theizé<br>Rhône — Beaujolais</p>
+        </div>
+        <div class="contact-info-item">
+          <span class="ci-icon">📞</span>
+          <p><a href="tel:+33638649818">06 38 64 98 18</a></p>
+        </div>
+        <div class="contact-info-item">
+          <span class="ci-icon">🌍</span>
+          <p>Intervention locale à Theizé, Villefranche-sur-Saône et dans tout le Beaujolais.</p>
+        </div>
+        <div class="contact-info-item">
+          <span class="ci-icon">✅</span>
+          <p>Devis gratuit et sans engagement — Artisans qualifiés RGE.</p>
+        </div>
+      </div>
+      <div class="fade-in">
+        <form action="https://checkout.kamkod.com/contact" method="POST" aria-label="Formulaire de demande de devis">
+          <input type="hidden" name="lead_id" value="None">
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input type="text" id="name" name="name" placeholder="Jean Dupont" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Votre adresse e-mail</label>
+            <input type="email" id="email" name="email" placeholder="jean.dupont@email.fr" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre projet de rénovation énergétique ou votre demande de devis." required></textarea>
+          </div>
+          <button type="submit" class="cta" aria-label="Envoyer le formulaire de contact">Envoyer ma demande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST SIGNALS ══ -->
+<section id="confiance" aria-label="Pourquoi nous choisir">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Nos engagements</span>
+      <h2 class="section-title">Pourquoi nous choisir</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item fade-in">
+        <span class="trust-icon">🏅</span>
+        <p>Artisans qualifiés RGE</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">📄</span>
+        <p>Devis gratuit et sans engagement</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">📍</span>
+        <p>Intervention locale dans le Beaujolais</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">🔩</span>
+        <p>Matériel professionnel certifié</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">💶</span>
+        <p>Accompagnement administratif pour les aides</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon">💳</span>
+        <p>Paiement par carte bancaire accepté</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer aria-label="Pied de page Beaujolais Energies">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo">Beaujolais Energies</span>
+      <p>Spécialiste de la rénovation énergétique et des énergies renouvelables à Theizé (69620), au cœur du Beaujolais.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#avis">Avis clients</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#horaires">Horaires</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>69620 Theizé<br>Rhône — Beaujolais</p>
+      <br>
+      <p>📞 <a href="tel:+33638649818">06 38 64 98 18</a></p>
+      <br>
+      <a href="#contact" class="cta" aria-label="Nous contacter">Nous contacter</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Beaujolais Energies — Theizé (69620)</span>
+    <span>Rénovation énergétique dans le Beaujolais et le Rhône.</span>
+  </div>
+</footer>
+
+<script>
+  // ── BURGER MENU ──
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+  burger.addEventListener('click', function() {
+    const isOpen = navMenu.classList.toggle('open');
+    burger.classList.toggle('active', isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      burger.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ── FADE-IN SCROLL ──
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  fadeEls.forEach(function(el) { observer.observe(el); });
+
+  // ── CAROUSEL ──
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const slides = track.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('#carouselDots .dot');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    let current = 0;
+    let slidesPerView = 1;
+
+    function getSlidesPerView() {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 768) return 2;
+      return 1;
+    }
+
+    function getSlideWidth() {
+      const outer = track.parentElement;
+      const gap = 16;
+      const spv = getSlidesPerView();
+      return (outer.offsetWidth - gap * (spv - 1)) / spv;
+    }
+
+    function updateCarousel() {
+      slidesPerView = getSlidesPerView();
+      const sw = getSlideWidth();
+      const gap = 16;
+      slides.forEach(function(s) { s.style.flex = '0 0 ' + sw + 'px'; });
+      const maxIndex = Math.max(0, slides.length - slidesPerView);
+      if (current > maxIndex) current = maxIndex;
+      const offset = current * (sw + gap);
+      track.style.transform = 'translateX(-' + offset + 'px)';
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+    }
+
+    function goTo(index) {
+      const maxIndex = Math.max(0, slides.length - getSlidesPerView());
+      current = Math.max(0, Math.min(index, maxIndex));
+      updateCarousel();
+    }
+
+    prevBtn.addEventListener('click', function() { goTo(current - 1); });
+    nextBtn.addEventListener('click', function() { goTo(current + 1); });
+    dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(i); }); });
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+  })();
+</script>
+<!-- kamkod:habillage -->
+<meta name="kamkod-version" content="2f9e8a5a1632">
+<div id="kamkod-demo-banner" class="kk-bandeau" data-lead="63672671-0f48-4741-be2b-0667fa18f38a" data-echeance="2026-09-20T08:11:10Z" style="position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;z-index:9999;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;box-shadow:0 -2px 14px rgba(0,0,0,.4);">
+  <div style="max-width:920px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;">
+    <span class="kk-texte" style="flex:1;min-width:200px;font-size:13px;opacity:.8;">Aperçu de votre futur site</span>
+    <span id="kk-offre" class="kk-decompte" data-echeance="2026-09-20T08:11:10Z" style="font-size:14px;font-variant-numeric:tabular-nums;">Aperçu de votre futur site</span>
+    <a class="kk-cta cta" href="https://clic-v2.kamkod.com/api/comportement/clic/63672671-0f48-4741-be2b-0667fa18f38a" rel="noopener" style="background:#EA580C;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap;">Activer mon site</a>
+  </div>
+</div>
+<style>#kamkod-demo-banner{opacity:.55;transition:opacity .6s ease}#kamkod-demo-banner.kk-plein{opacity:1}</style>
+<script>(function(){var b=document.getElementById('kamkod-demo-banner');if(!b)return;var plein=false;function allumer(){if(plein){return;}plein=true;b.classList.add('kk-plein');}window.addEventListener('scroll',allumer,{once:true,passive:true});setTimeout(allumer,9000);})();</script>
+<script>window.__KK__={"over":"2026-09-20T08:11:10Z"};</script>
+<script>(function(){
+  var URL = "https://clic-v2.kamkod.com/api/comportement/clic/63672671-0f48-4741-be2b-0667fa18f38a";
+  var PID = "63672671-0f48-4741-be2b-0667fa18f38a";
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;
+    var a = e.target.closest('a');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;
+    if(/^[a-z][a-z0-9+.-]*:/i.test(href)) return;
+    if(href.indexOf('//') === 0) return;
+    e.preventDefault(); window.location.href = URL;
+  }, true);
+})();</script>
+<script>(function(){
+  var el = document.getElementById('kk-offre');
+  if(!el) return;
+  var PID = "63672671-0f48-4741-be2b-0667fa18f38a";
+  var PRIX_L = "", PRIX_O = "";
+  var T_LAUNCH = "Votre aper\u00e7u expire dans \u003cb\u003e%TEMPS%\u003c/b\u003e \u2014 activez-le maintenant pour ne pas le perdre.", T_OVER = "Le d\u00e9ploiement est pass\u00e9 \u00e0 \u003cb\u003e%PRIX%\u003c/b\u003e";
+  var T_VIDE = "Aper\u00e7u de votre futur site";
+  function rendu(){
+    var fin = Date.parse(el.dataset.echeance || "2026-09-20T08:11:10Z");
+    if(!fin){ el.textContent = T_VIDE; return; }
+    var reste = Math.floor((fin - Date.now())/1000);
+    if(reste > 0){ var h=Math.floor(reste/3600), m=Math.floor((reste%3600)/60), s=reste%60;
+      var t = (h>0?(h+' h '):'') + (m<10?'0':'') + m + ' min ' + (s<10?'0':'') + s + ' s';
+      el.innerHTML = T_LAUNCH.replace('%PRIX%', PRIX_L).replace('%TEMPS%', t); }
+    else { el.innerHTML = (PRIX_O || PRIX_L)
+      ? T_OVER.replace('%PRIX%', PRIX_O || PRIX_L) : T_VIDE; }
+  }
+  rendu(); setInterval(rendu, 1000);
+})();</script>
+<!-- /kamkod:habillage -->
+<script>(function(){var s={"lead":"63672671-0f48-4741-be2b-0667fa18f38a","page":"site","t0":Date.now(),"scroll":0};window.addEventListener("scroll",function(){var d=document.documentElement;var p=d.scrollTop/((d.scrollHeight-d.clientHeight)||1);s.scroll=Math.max(s.scroll,Math.round(p*100));});window.addEventListener("pagehide",function(){s.ms=Date.now()-s.t0;try{navigator.sendBeacon("https://clic-v2.kamkod.com/api/comportement/",JSON.stringify(s));}catch(e){var x=new XMLHttpRequest();x.open("POST","https://clic-v2.kamkod.com/api/comportement/",true);x.send(JSON.stringify(s));}});})();</script></body>
+</html>
